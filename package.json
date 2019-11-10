@@ -1,0 +1,70 @@
+{
+  "name": "electron-react-boilerplate",
+  "version": "0.1.0",
+  "author": "hawry",
+  "description": "A boilerplate Electron-React project",
+  "private": true,
+  "dependencies": {
+    "electron-is-dev": "~1.1.0",
+    "electron-settings": "~3.2.0",
+    "electron-window-state": "~5.0.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0"
+  },
+  "license": "MIT",
+  "homepage": "./",
+  "build": {
+    "appId": "net.hawry.electron.boilerplate",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "deb"
+        },
+        {
+          "target": "AppImage"
+        }
+      ],
+      "maintainer": "hawry@hawry.net",
+      "category": "Utility"
+    }
+  },
+  "main": "public/electron.js",
+  "scripts": {
+    "electron": "NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
+    "start": "BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "~7.1.1",
+    "electron-builder": "~22.1.0",
+    "electron-reload": "~1.5.0",
+    "nodemon": "~1.19.4"
+  }
+}
