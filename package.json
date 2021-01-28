@@ -62,7 +62,7 @@
     ]
   },
   "devDependencies": {
-    "electron": "~7.2.4",
+    "electron": "~9.4.0",
     "electron-builder": "~22.1.0",
     "electron-reload": "~1.5.0",
     "nodemon": "~1.19.4"
